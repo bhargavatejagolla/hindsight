@@ -307,7 +307,8 @@ class ReflectResult(BaseModel):
                     ],
                     "experience": [],
                     "opinion": [],
-                    "mental_models": [],
+                    "observation": [],
+                    "mental-models": [],
                     "directives": [
                         {
                             "id": "directive-123",
@@ -324,7 +325,7 @@ class ReflectResult(BaseModel):
 
     text: str = Field(description="The formulated answer text")
     based_on: dict[str, Any] = Field(
-        description="Facts used to formulate the answer, organized by type (world, experience, mental_models, directives)"
+        description="Facts used to formulate the answer, organized by type (world, experience, observation, mental-models, directives)"
     )
     structured_output: dict[str, Any] | None = Field(
         default=None,
